@@ -1,0 +1,1125 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+/*********************
+Universal
+*********************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+    background-color: #040404;
+    color: #fff;
+    position: relative;
+    background: transparent;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    background: #040404 top right no-repeat;
+    background: #040404 url("../img/Golden/blurred.JPG") top right no-repeat;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
+}
+
+@media (min-width: 1024px) {
+    body::before {
+        background-attachment: fixed;
+    }
+}
+
+a {
+    color: #eaa221;
+}
+
+a:hover {
+    color: #f0bc5e;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica", sans-serif;
+}
+
+/*********************
+Header
+*********************/
+#header {
+    transition: ease-in-out 0.3s;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 997;
+    overflow-y: auto;
+}
+
+#header * {
+    transition: ease-in-out 0.3s;
+}
+
+#header h1 {
+    font-size: 48px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+}
+
+#header h1 a, #header h1 a:hover {
+    color: #fff;
+    line-height: 1;
+    display: inline-block;
+}
+
+#header h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#header h2 span {
+    color: #fff;
+    border-bottom: 2px solid #eaa221;
+    padding-bottom: 6px;
+}
+
+#header h2 p {
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+#header img {
+    padding: 0;
+    margin: 0;
+}
+
+#header .social-links {
+    margin-top: 40px;
+    display: flex;
+}
+
+#header .social-links a {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    line-height: 1;
+    margin-right: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+#header .social-links a:hover {
+    background: #eaa221;
+}
+
+@media (max-width: 992px) {
+    #header h1 {
+        font-size: 36px;
+    }
+
+    #header h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #header .social-links {
+        margin-top: 15px;
+    }
+
+    #header .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/*********************
+Navigation Menu
+*********************/
+.mobile-visable {
+    display: none !important;
+}
+
+@media (max-width: 990px) {
+    .mobile-visable {
+        display: block !important;
+    }
+}
+
+/*********************
+Desktop Navigation
+*********************/
+.nav-menu {
+    margin-top: 35px;
+}
+
+.nav-menu ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu li+li {
+    margin-left: 30px;
+}
+
+.nav-menu a {
+    display: block;
+    position: relative;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Helvetica", sans-serif;
+}
+
+.nav-menu a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #eaa221;
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.nav-menu a:hover:before, .nav-menu li:hover>a:before, .nav-menu .active>a:before {
+    visibility: visible;
+    width: 25px;
+}
+
+.nav-menu a:hover, .nav-menu .active>a, .nav-menu li:hover>a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/**********************
+ Mobile Navigation
+ **********************/
+.mobile-nav-toggle {
+    position: fixed;
+    right: 15px;
+    top: 10px;
+    z-index: 9998;
+    border: 0;
+    font-size: 24px;
+    font: #fff;
+    font-weight: 800;
+    transition: all 0.4s;
+    outline: none !important;
+    line-height: 1;
+    cursor: pointer;
+    text-align: right;
+}
+
+.navbar-toggler {
+    background: black;
+}
+
+.navbar-nav {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.59);
+    padding: 10rem;
+    top: -20px;
+    right: -20px;
+    position: absolute;
+    width: 25rem;
+    height: 65rem;
+}
+
+.navbar-nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/******************
+Header
+*******************/
+header {
+    height: 75vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+#header.header-top {
+    height: 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#header.header-top .social-links, #header.header-top h2 {
+    display: none;
+}
+
+#header.header-top h1 {
+    margin-right: auto;
+    font-size: 36px;
+}
+
+#header.header-top .container {
+    display: flex;
+    align-items: center;
+}
+
+#header.header-top .nav-menu {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #header.header-top {
+        height: 60px;
+    }
+
+    #header.header-top h1 {
+        font-size: 26px;
+    }
+}
+
+/*********************
+Section
+*********************/
+section {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    top: 140px;
+    bottom: 100%;
+    opacity: 0;
+    transition: ease-in-out 0.4s;
+    z-index: 2;
+}
+
+section.section-show {
+    top: 100px;
+    bottom: auto;
+    opacity: 1;
+    padding-bottom: 45px;
+}
+
+section .container {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 30px;
+    width: 100%;
+}
+
+@media (max-width: 990px) {
+    section {
+        top: 120px;
+        position: relative;
+        opacity: 1;
+    }
+
+    section.section-show {
+        top: 80px;
+    }
+}
+
+.section-title h2 {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0;
+    line-height: 1px;
+    margin: 0 0 20px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: "Helvetica", sans-serif;
+}
+
+.section-title i {
+    color: #ffa000;
+    font-size: 20px;
+}
+
+.section-title p {
+    margin: 0;
+    margin: -15px 0 15px 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Helvetica", sans-serif;
+}
+
+/*********************
+About
+*********************/
+.about-me .content h3 {
+    font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    color: #eaa221;
+}
+
+.about-me .content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-me .content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-me .content ul li {
+    padding-bottom: 10px;
+}
+
+.about-me .content ul i {
+    font-size: 20px;
+    padding-right: 2px;
+    color: #eaa221;
+}
+
+.about-me .content p:last-child {
+    margin-bottom: 0;
+}
+
+/*********************
+Skills
+*********************/
+.skills .progress {
+    height: 50px;
+    display: block;
+    background: none;
+}
+
+.skills .progress .skill {
+    padding: 10px 0;
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Helvetica", sans-serif;
+    color: #fff;
+}
+
+.skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+}
+
+.skills .progress-bar-wrap {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: .9s;
+    background-color: #eaa221;
+}
+
+.skills .table {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.skills .table .header {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: "Helvetica", sans-serif;
+    color: #fff;
+    font-size: 15px;
+}
+
+.skills .table .tablerow {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-family: "Arial", sans-serif;
+    color: #fff;
+    font-size: 13px;
+}
+
+/*********************
+Interests
+*********************/
+.interests .icon-box {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: ease-in-out 0.3s;
+}
+
+.interests .icon-box i {
+    font-size: 32px;
+    padding-right: 10px;
+    line-height: 1;
+}
+
+.interests .icon-box h3 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 16px;
+    color: #fff;
+}
+
+.interests .icon-box:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/*********************
+Work Timeline
+*********************/
+.main-timeline {
+    position: relative
+}
+
+.main-timeline:after, .main-timeline:before {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both
+}
+
+.main-timeline:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 0;
+    left: 50%
+}
+
+.main-timeline .timeline {
+    width: 50%;
+    float: left;
+    position: relative;
+    z-index: 1
+}
+
+.main-timeline .timeline:after, .main-timeline .timeline:before {
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both
+}
+
+.main-timeline .timeline:first-child:before, .main-timeline .timeline:last-child:before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #eaa221;
+    position: absolute;
+    top: 0;
+    right: -14px;
+    z-index: 1
+}
+
+.main-timeline .timeline:last-child:before {
+    top: auto;
+    bottom: 0
+}
+
+.main-timeline .timeline:last-child:nth-child(even):before {
+    right: auto;
+    left: -12px;
+    bottom: -2px
+}
+
+.main-timeline .timeline-content {
+    text-align: center;
+    margin-top: 8px;
+    position: relative;
+    transition: all .3s ease 0s
+}
+
+.main-timeline .timeline-content:before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    background: #eaa221;
+    position: absolute;
+    top: 88px;
+    left: 0;
+    z-index: -1
+}
+
+.main-timeline .circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #000;
+    border: 8px solid #eaa221;
+    float: left;
+    margin-right: 25px;
+    position: relative
+}
+
+.main-timeline .circle img {
+    width: 164px;
+    height: 164px;
+    right: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+.main-timeline .circle span:after, .main-timeline .circle span:before, .main-timeline .circle:before {
+    content: "";
+    margin: auto;
+    position: absolute;
+    right: -33px;
+    bottom: 0;
+    z-index: -1
+}
+
+.main-timeline .circle:before {
+    width: 26px;
+    height: 30px;
+    background: #eaa221;
+    top: 0;
+    /* box-shadow: inset 7px 0 9px -7px #444 */
+}
+
+.main-timeline .circle span {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    line-height: 160px;
+    border: 3px solid #adabab;
+    font-size: 80px;
+    /* color: #454344 */
+}
+
+.main-timeline .circle span:after, .main-timeline .circle span:before {
+    width: 28px;
+    height: 50px;
+    background: #000;
+    border-radius: 0 0 0 21px;
+    top: -54px
+}
+
+.main-timeline .circle span:after {
+    border-radius: 21px 0 0;
+    top: 0;
+    bottom: -56px
+}
+
+.main-timeline .content {
+    display: table;
+    padding-right: 40px;
+    position: relative
+}
+
+.main-timeline .year {
+    display: block;
+    margin: 40px 0 40px;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 7px;
+    color: #fff;
+}
+
+.main-timeline .title {
+    line-height: 18px;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+    color: #eaa221;
+    margin-top: 0
+}
+
+.main-timeline .icon span:after, .main-timeline .icon span:before, .main-timeline .icon:before {
+    content: "";
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    left: -15px
+}
+
+.main-timeline .description {
+    /* font-size: 14px; */
+    /* color: #a6a6a6; */
+    text-align: left
+}
+
+.main-timeline .icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #eaa221;
+    border: 4px solid #eaa221;
+    position: absolute;
+    top: 78px;
+    right: -14px
+}
+
+.main-timeline .icon:before {
+    width: 15px;
+    background: #eaa221;
+    top: -1px
+}
+
+.main-timeline .icon span:after, .main-timeline .icon span:before {
+    width: 21px;
+    background: #000;
+    border-radius: 0 0 21px;
+    top: -30px
+}
+
+.main-timeline .icon span:after {
+    border-radius: 0 21px 0 0;
+    top: 0;
+    left: -15px;
+    bottom: -30px
+}
+
+.main-timeline .timeline:nth-child(2n) .circle, .main-timeline .timeline:nth-child(2n) .timeline-content {
+    float: right
+}
+
+.main-timeline .timeline:nth-child(2n) .circle {
+    margin: 0 0 0 25px
+}
+
+.main-timeline .timeline:nth-child(2n) .circle:before {
+    right: auto;
+    left: -33px;
+    box-shadow: -7px 0 9px -7px #444 inset
+}
+
+.main-timeline .timeline:nth-child(2n) .circle span:after, .main-timeline .timeline:nth-child(2n) .circle span:before {
+    right: auto;
+    left: -33px;
+    border-radius: 0 0 21px
+}
+
+.main-timeline .timeline:nth-child(2n) .circle span:after {
+    border-radius: 0 21px 0 0
+}
+
+.main-timeline .timeline:nth-child(2n) .content {
+    padding: 0 0 0 40px;
+    margin-left: 2px
+}
+
+.main-timeline .timeline:nth-child(2n) .icon {
+    right: auto;
+    left: -14px
+}
+
+.main-timeline .timeline:nth-child(2n) .icon span:after, .main-timeline .timeline:nth-child(2n) .icon span:before, .main-timeline .timeline:nth-child(2n) .icon:before {
+    left: auto;
+    right: -15px
+}
+
+.main-timeline .timeline:nth-child(2n) .icon span:before {
+    border-radius: 0 0 0 21px
+}
+
+.main-timeline .timeline:nth-child(2n) .icon span:after {
+    border-radius: 21px 0 0
+}
+
+.main-timeline .timeline:nth-child(2) {
+    margin-top: 180px
+}
+
+.main-timeline .timeline:nth-child(odd) {
+    margin: -175px 0 0
+}
+
+.main-timeline .timeline:nth-child(even) {
+    margin-bottom: 80px
+}
+
+.main-timeline .timeline:first-child, .main-timeline .timeline:last-child:nth-child(even) {
+    margin: 0
+}
+
+@media only screen and (max-width:990px) {
+    .main-timeline:before {
+        left: 100%
+    }
+
+    .main-timeline .timeline {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px !important
+    }
+
+    .main-timeline .timeline:first-child:before, .main-timeline .timeline:last-child:before {
+        left: auto !important;
+        right: -13px !important
+    }
+
+    .main-timeline .timeline:nth-child(2n) .circle {
+        float: left;
+        margin: 0 25px 0 0
+    }
+
+    .main-timeline .timeline:nth-child(2n) .circle:before {
+        right: -33px;
+        left: auto;
+        box-shadow: 7px 0 9px -7px #444 inset
+    }
+
+    .main-timeline .timeline:nth-child(2n) .circle span:after, .main-timeline .timeline:nth-child(2n) .circle span:before {
+        right: -33px;
+        left: auto;
+        border-radius: 0 0 0 21px
+    }
+
+    .main-timeline .timeline:nth-child(2n) .circle span:after {
+        border-radius: 21px 0 0
+    }
+
+    .main-timeline .timeline:nth-child(2n) .content {
+        padding: 0 40px 0 0;
+        margin-left: 0
+    }
+
+    .main-timeline .timeline:nth-child(2n) .icon {
+        right: -14px;
+        left: auto
+    }
+
+    .main-timeline .timeline:nth-child(2n) .icon span:after, .main-timeline .timeline:nth-child(2n) .icon span:before, .main-timeline .timeline:nth-child(2n) .icon:before {
+        left: -15px;
+        right: auto
+    }
+
+    .main-timeline .timeline:nth-child(2n) .icon span:before {
+        border-radius: 0 0 21px
+    }
+
+    .main-timeline .timeline:nth-child(2n) .icon span:after {
+        border-radius: 0 21px 0 0
+    }
+
+    .main-timeline .timeline:nth-child(2), .main-timeline .timeline:nth-child(even), .main-timeline .timeline:nth-child(odd) {
+        margin: 0
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .main-timeline:before {
+        left: 0
+    }
+
+    .main-timeline .timeline:first-child:before, .main-timeline .timeline:last-child:before {
+        left: -12px !important;
+        right: auto !important
+    }
+
+    .main-timeline .circle, .main-timeline .timeline:nth-child(2n) .circle {
+        width: 130px;
+        height: 130px;
+        float: none;
+        margin: 0 auto
+    }
+
+    .main-timeline .circle img {
+        width: 122px;
+        height: 122px;
+        right: -4px;
+        top: -4px;
+        position: absolute;
+    }
+
+    .main-timeline .timeline-content:before {
+        width: 99.5%;
+        top: 68px;
+        left: .5%
+    }
+
+    .main-timeline .circle span {
+        line-height: 115px;
+        font-size: 60px
+    }
+
+    .main-timeline .circle span:after, .main-timeline .circle span:before, .main-timeline .circle:before, .main-timeline .icon {
+        display: none
+    }
+
+    .main-timeline .content, .main-timeline .timeline:nth-child(2n) .content {
+        padding: 0 10px
+    }
+
+    .main-timeline .year {
+        margin-bottom: 15px
+    }
+
+    .main-timeline .description {
+        text-align: center
+    }
+}
+
+/*********************
+Portfolio
+*********************/
+.portfolio .portfolio-item {
+    margin-bottom: 30px;
+}
+
+.portfolio .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.portfolio .portfolio-wrap::before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    top: 30px;
+    bottom: 30px;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+.portfolio .portfolio-wrap .portfolio-info::before {
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    transition: all 0.5s ease 0s;
+    z-index: 9994;
+}
+
+.portfolio .portfolio-wrap .portfolio-info::after {
+    display: block;
+    content: "";
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    bottom: 35px;
+    right: 35px;
+    border-bottom: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transition: all 0.5s ease 0s;
+    z-index: 9994;
+} */
+.portfolio .portfolio-wrap .portfolio-info h4 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio .portfolio-wrap img {
+    width: 30rem;
+    height: 15rem;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+    text-align: center;
+    z-index: 4;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+    color: #fff;
+    margin: 0 2px;
+    font-size: 28px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+    color: #ffa000;
+}
+
+.portfolio .portfolio-wrap:hover::before {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+    opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::before {
+    top: 15px;
+    left: 15px;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info::after {
+    bottom: 15px;
+    right: 15px;
+}
+
+.modal-dialog {
+    width: 85%;
+    min-width: 85%;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*********************
+Contact
+*********************/
+.fa-icon-image {
+    color: #eaa221;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size-adjust: none;
+    font-stretch: normal;
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    text-rendering: auto;
+    transition: all .65s linear 0s;
+    text-align: center;
+    transition: all 1s cubic-bezier(.99, .82, .11, 1.41);
+}
+
+.contact .info-box {
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.contact .info-box p {
+    font-size: 25px;
+}
+
+.contact .info-box a {
+    color: #fff;
+}
+
+/*********************
+Portfolio Details
+*********************/
+.portfolio-details {
+    padding-top: 40px;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.portfolio-details .container {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.portfolio-details .portfolio-title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-details-carousel .owl-nav, .portfolio-details .portfolio-details-carousel .owl-dots {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.portfolio-details .portfolio-details-carousel .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.portfolio-details .portfolio-details-carousel .owl-dot.active {
+    background-color: #eaa221 !important;
+}
+
+.portfolio-details .portfolio-info {
+    padding-top: 45px;
+}
+
+.portfolio-details .portfolio-info h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+    margin-top: 10px;
+}
+
+.portfolio-details .portfolio-info p {
+    font-size: 15px;
+    padding: 15px 0 0 0;
+}
+
+@media (max-width: 992px) {
+    .portfolio-details .portfolio-info {
+        padding-top: 20px;
+    }
+}
