@@ -353,8 +353,8 @@ Section
 *********************/
 
 section {
-    overflow: hidden;
-    position: relative;
+    /* overflow: hidden; */
+    /* position: relative; */
     width: 100%;
     top: 100px;
     bottom: auto;
@@ -380,7 +380,7 @@ section .container {
 @media (max-width: 990px) {
     section {
         top: 120px;
-        position: relative;
+        /* position: relative; */
         opacity: 1;
     }
 
