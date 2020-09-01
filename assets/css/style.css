@@ -192,6 +192,7 @@ Desktop Navigation
 
 #mainNav  {
     padding: 5px;
+    position: fixed;
 }
 
 @media (min-width: 990px) {
@@ -220,13 +221,11 @@ Desktop Navigation
     bottom: 5px;
     left: 0;
     background-color: #eaa221;
-    /* visibility: hidden; */
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
 }
 
 #mainNav a:hover:before, #mainNav li:hover>a:before, #mainNav .active>a:before {
-    visibility: visible;
     width: 25px;
 }
 
