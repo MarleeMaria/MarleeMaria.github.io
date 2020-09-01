@@ -30,13 +30,12 @@
 
             <h1><a href="index.html">Marlee Roth</a></h1>
             <h2> I am a <span>Software Engineer</span> with experience in <span>Full Stack Development</span>
-                <p> Click the links below to learn more about me!</p>
             </h2>
 
 
-            <nav class="nav-menu d-none d-lg-block">
+            <nav class="nav-menu d-none d-lg-block" id='transition'>
                 <ul>
-                    <li class="active"><a href="#header">Home</a></li>
+                    <li class="active"><a href="#header" id="home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#Work">Work</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
@@ -44,36 +43,35 @@
                 </ul>
             </nav>
 
-
-            <nav class="navbar mobile-nav-toggle navbar-dark mobile-visable">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class=" navbar-toggler-icon"></span>
+            <nav class="navbar navbar-expand-md mobile-visable navbar-dark sticky fixed-top" id="mainNav">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="fa fa-bars"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav" id="top-menu">
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto p-2" id="top-menu">
+                        <li></li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a><br>
+                            <a class="nav-link" href="#header">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#Work">Work</a><br>
+                            <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Portfolio</a><br>
+                            <a class="nav-link" href="#Work">Work</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a><br>
+                            <a class="nav-link" href="#portfolio">Portfolio</a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
 
-
-
             <div class="social-links">
                 <a href="https://github.com/MarleeMaria"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/marlee-roth/"><i class="fab fa-linkedin"></i></a>
-
                 <a href="https://www.facebook.com/marlee.roth" class="facebook"><i class="fab fa-facebook"></i></a>
                 <a href="https://www.instagram.com/marleemaria/" class="instagram"><i class="fab fa-instagram"></i></a>
             </div>
@@ -437,9 +435,9 @@
                                         <span class="year">May 2017 - August 2017</span>
                                         <h4 class="title">Operations Assistant – App Development</h4>
                                         <ul class="description">
-                                             Assisted operations coordinator in the development process of multiple applications for resource allocation.<br><br>
-                                             Architected an end-to-end experience for users taking continuing input from the end user and the existing system into consideration.<br><br>
-                                             Trained employees on the new system with lunch and learns, and training sessions.
+                                            Assisted operations coordinator in the development process of multiple applications for resource allocation.<br><br>
+                                            Architected an end-to-end experience for users taking continuing input from the end user and the existing system into consideration.<br><br>
+                                            Trained employees on the new system with lunch and learns, and training sessions.
                                         </ul>
                                         <div class="icon"><span></span></div>
                                     </div>
@@ -467,95 +465,118 @@
 
             <div class="row portfolio-container">
 
-                <div class="col-lg-4 col-md-6 portfolio-item ">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/Content/website.JPG" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>Student Portfolio</h4>
-                            <p>Website</p>
-                            <div class="portfolio-links">
-                                <a data-toggle="modal" data-target="#website"><i class="fas fa-plus-square"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/Content/seamcarving.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>Seam Carving</h4>
-                            <p>Application</p>
-                            <div class="portfolio-links">
-                                <a data-toggle="modal" data-target="#seam"><i class="fas fa-plus-square"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="col-lg-4 col-md-6 portfolio-item ">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/Content/beer.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>BeerBuddy</h4>
-                            <p>Website</p>
-                            <div class="portfolio-links">
-                                <a data-toggle="modal" data-target="#beer"><i class="fas fa-plus-square"></i></a>
+
+                    <a data-toggle="modal" data-target="#website">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/Content/website.JPG" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Student Portfolio</h4>
+                                <p>Website</p>
+                                <div class="portfolio-links">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+
                 </div>
 
-                <div class="col-lg-4 col-md-6 portfolio-item">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/Content/pizza.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>Pizza4u</h4>
-                            <p>Website</p>
-                            <div class="portfolio-links">
-                                <a data-toggle="modal" data-target="#pizza"><i class="fas fa-plus-square"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="col-lg-4 col-md-6 portfolio-item">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/Content/park.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>ParkNgo</h4>
-                            <p>Website</p>
-                            <div class="portfolio-links">
-                                <a data-toggle="modal" data-target="#parking"><i class="fas fa-plus-square"></i></a>
+                    <a data-toggle="modal" data-target="#seam">
+
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/Content/seamcarving.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Seam Carving</h4>
+                                <p>Application</p>
+                                <div class="portfolio-links">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-4 col-md-6 portfolio-item ">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/Content/botross.jpg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>Botross</h4>
-                            <p>Robot</p>
-                            <div class="portfolio-links">
-                                <a data-toggle="modal" data-target="#botross"><i class="fas fa-plus-square"></i></a>
+                    <a data-toggle="modal" data-target="#beer">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/Content/beer.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>BeerBuddy</h4>
+                                <p>Website</p>
+                                <div class="portfolio-links">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
                 <div class="col-lg-4 col-md-6 portfolio-item">
-                    <div class="portfolio-wrap">
-                        <img src="assets/img/Content/SlimeOut.png" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                            <h4>SlimeOut</h4>
-                            <p>Game</p>
-                            <div class="portfolio-links">
-                                <a data-toggle="modal" data-target="#slimeout"><i class="fas fa-plus-square"></i></a>
+                    <a data-toggle="modal" data-target="#pizza">
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/Content/pizza.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Pizza4u</h4>
+                                <p>Website</p>
+                                <div class="portfolio-links">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <a data-toggle="modal" data-target="#parking">
+
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/Content/park.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>ParkNgo</h4>
+                                <p>Website</p>
+                                <div class="portfolio-links">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item ">
+                    <a data-toggle="modal" data-target="#botross">
+
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/Content/botross.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Botross</h4>
+                                <p>Robot</p>
+                                <div class="portfolio-links">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item">
+                    <a data-toggle="modal" data-target="#slimeout">
+
+                        <div class="portfolio-wrap">
+                            <img src="assets/img/Content/SlimeOut.png" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>SlimeOut</h4>
+                                <p>Game</p>
+                                <div class="portfolio-links">
+                                    <i class="fas fa-info-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
                 </div>
 
             </div>
@@ -580,7 +601,7 @@
                 <div class="col-lg-3 col-md-6 text-center info-box">
                     <i class="fas fa-phone-alt fa-4x fa-icon-image"></i><br><br>
                     <h3> Call</h3>
-                    <p class="description">
+                    <p>
                         (416)-994-2874
                     </p>
                 </div>
@@ -588,8 +609,7 @@
                 <div class="col-lg-3 col-md-6 text-center info-box">
                     <i class="fas fa-user-friends fa-4x fa-icon-image"></i><br><br>
                     <h3> Connect</h3>
-                    <p class="description">
-
+                    <p>
                         <a href="https://www.facebook.com/marlee.roth">
                             <i class="fab fa-facebook mb-3"></i></a>&nbsp;&nbsp;
                         <a href="https://www.linkedin.com/in/marlee-roth/">
@@ -598,31 +618,26 @@
                             <i class="fab fa-github mb-3"></i></a>&nbsp;&nbsp;
                         <a href="https://twitter.com/MarleeMaria">
                             <i class="fab fa-twitter mb-3"></i></a>
-
                     </p>
                 </div>
 
                 <div class="col-lg-3 col-md-6 text-center info-box">
                     <i class="fas fa-envelope fa-4x fa-icon-image"></i><br><br>
                     <h3> Email</h3>
-                    <p class="description">
-
+                    <p>
                         <a class="d-block" href="mailto:marlee.roth@gmail.com">
                             Marlee.roth@gmail.com
                         </a>
-
                     </p>
                 </div>
 
                 <div class="col-lg-3 col-md-6 text-center info-box">
                     <i class="fas fa-user-plus fa-4x fa-icon-image "></i><br><br>
                     <h3> Hire Me</h3>
-                    <p class="description">
-
+                    <p>
                         <a href="resume.pdf" download>
                             <button class="btn btn-outline-light font-weight-bold"> Resume </button>
                         </a>
-
                     </p>
                 </div>
 

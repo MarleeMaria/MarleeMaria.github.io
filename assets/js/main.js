@@ -1,64 +1,32 @@
 !(function($) {
   "use strict";
 
-  // Nav Menu
-  $(document).on('click', '.nav-menu a, .mobile-nav a', function(e) {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var hash = this.hash;
-      var target = $(hash);
-      if (target.length) {
-        e.preventDefault();
 
-        if ($(this).parents('.nav-menu, .mobile-nav').length) {
-          $('.nav-menu .active, .mobile-nav .active').removeClass('active');
-          $(this).closest('li').addClass('active');
-        }
 
-        if (hash == '#header') {
-          $('#header').removeClass('header-top');
-          $("section").removeClass('section-show');
-          return;
-        }
 
-        if (!$('#header').hasClass('header-top')) {
-          $('#header').addClass('header-top');
-          setTimeout(function() {
-            $("section").removeClass('section-show');
-            $(hash).addClass('section-show');
-          }, 350);
-        } else {
-          $("section").removeClass('section-show');
-          $(hash).addClass('section-show');
-        }
 
-        if ($('body').hasClass('mobile-nav-active')) {
-          $('body').removeClass('mobile-nav-active');
-          $('.mobile-nav-toggle i').toggleClass('icofont-navigation-menu icofont-close');
-          $('.mobile-nav-overly').fadeOut();
-        }
+  $(document).ready(function(){
 
-        return false;
+    window.onscroll = function() {myFunction()};
 
+    var navbar = document.getElementById("mainNav");
+    var transitionPoint = document.getElementById("transition");
+
+
+    var transition = transitionPoint.offsetTop;
+    var sticky = navbar.offsetTop;
+
+    // var main = document.getElementById("me");
+    // var mainWidth = main.offsetTop;
+
+    function myFunction() {
+      if (window.pageYOffset >= sticky + transition) {
+        navbar.classList.remove("mobile-visable")
+      } else {
+        navbar.classList.add("mobile-visable");
       }
     }
-  });
 
-  // Activate/show sections on load with hash links
-  if (window.location.hash) {
-    var initial_nav = window.location.hash;
-    if ($(initial_nav).length) {
-      $('#header').addClass('header-top');
-      $('.nav-menu .active, .mobile-nav .active').removeClass('active');
-      $('.nav-menu, .mobile-nav').find('a[href="' + initial_nav + '"]').parent('li').addClass('active');
-      setTimeout(function() {
-        $("section").removeClass('section-show');
-        $(initial_nav).addClass('section-show');
-      }, 350);
-    }
-  }
-
-
-// Mobile Menu
 
   // Cache selectors
   var lastId,
@@ -72,6 +40,9 @@
         if (item.length) { return item; }
       });
 
+
+
+  // Bind to scroll
   $(window).scroll(function(){
      // Get container scroll position
      var fromTop = $(this).scrollTop()+topMenuHeight;
@@ -94,10 +65,27 @@
      }
   });
 
-
   $( '#top-menu' ).on("click", function(){
     $('.navbar-collapse').removeClass("show");
   });
+
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   // Skills section
