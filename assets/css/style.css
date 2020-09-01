@@ -192,7 +192,6 @@ Desktop Navigation
 
 #mainNav  {
     padding: 5px;
-    position: fixed;
 }
 
 @media (min-width: 990px) {
